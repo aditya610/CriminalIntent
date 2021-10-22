@@ -7,5 +7,12 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        val currentFragment = supportFragmentManager.findFragmentById(R.id.fragmet_container)
+        if (currentFragment == null) {
+            val fragmet = CrimeFragment()
+            supportFragmentManager.beginTransaction().add(R.id.fragmet_container,fragmet)
+                .commit()
+        }
     }
 }
