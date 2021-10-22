@@ -3,7 +3,7 @@ package com.bignerdranch.android.criminalintent
 import java.util.*
 
 data class Crime(val id: UUID = UUID.randomUUID(),
-                 val title: String = "",
+                 var title: String = "",
                  val date: Date = Date(),
                  var isSolved: Boolean = false
                  )
